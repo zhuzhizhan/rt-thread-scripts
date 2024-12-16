@@ -1,0 +1,1 @@
+qemu-system-riscv64 -M virt -m 4096M -nographic -bios ../opensbi/build/platform/generic/firmware/fw_jump.bin -kernel ../u-boot/u-boot-nodtb.bin -drive file=../rt-thread/bsp/qemu-virt64-riscv/rootfs.ext4,format=raw,id=hd0 -device virtio-blk-device,drive=hd0 -append "root=/dev/vda rw console=ttyS0"
